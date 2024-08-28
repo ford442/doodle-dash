@@ -288,6 +288,7 @@ function App() {
   const gameOver = gameState === 'end';
   return (
     <>
+      <div className="flex">
       <div className={`h-full w-full top-0 left-0 absolute ${isPlaying ? '' : 'pointer-events-none'}`}>
         <SketchCanvas onSketchChange={() => {
           setSketchHasChanged(true);
@@ -354,6 +355,7 @@ function App() {
             <button onClick={() => { goNext(false) }}>Skip</button>
             <button onClick={() => { handleEndGame(true) }}>Exit</button>
           </div>
+        </div>
         </div>
       )}
     </>
